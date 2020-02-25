@@ -1,1 +1,1 @@
-# metronome
+I'm interested in music tech, and though SVGs sounded cool. An interactive metronome sounded like a good first project to work on.
