@@ -4,8 +4,9 @@
         <title>Metronome</title>
         <meta content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="CSS/styles.css">
-        <script src="snap.svg-min.js"></script>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <script src="dist/snap.svg-min.js"></script>
+        
     </head>
 
     <body>
@@ -31,6 +32,7 @@
             .st14{fill:#006837;stroke:#1D1D1B;stroke-linecap:round;stroke-miterlimit:10;}
             .st15{fill:#F7931E;}
             .st16{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+            #PlayBttn{display:inline-block}
         </style>
         <g id="Metronome">
             <path class="st0" d="M121,332.5c-13.5,0-24.5-11-24.5-24.5V72c0-13.5,11-24.5,24.5-24.5h386c13.5,0,24.5,11,24.5,24.5v236
@@ -77,13 +79,13 @@
         <g id="Play-Pause">
             <g id="delete-this">
             </g>
-            <g id="PauseBttn_1_" class="st9">
+            <g id="PauseBttn" class="st9" onclick="bttnswap('#PauseBttn')">
                 <ellipse id="PauseCircle" class="st10" cx="308" cy="308" rx="17.3" ry="17.5"/>
                 <rect id="PauseSpace" x="306.5" y="300.5" class="st11" width="3" height="15"/>
                 <rect id="PauseLine2" x="300.1" y="300.5" class="st12" width="5.9" height="15"/>
                 <rect id="PauseLine1" x="309" y="300.5" class="st12" width="5.9" height="15"/>
             </g>
-            <g id="PlayBttn">
+            <g id="PlayBttn" onclick="animateNeedle();bttnSwap('#PlayBttn')">
                 <circle id="PlayCircle" class="st13" cx="308" cy="308" r="17.5"/>
                 <polygon id="PlayIcon" class="st14" points="302,315.1 317,307.6 302,300.1 		"/>
             </g>
@@ -95,6 +97,26 @@
             </g>
             <line id="Needle" class="st16" x1="318.5" y1="175" x2="318.5" y2="75"/>
         </g>
-        </svg>        
+        </svg>
+        <script>
+            /*let bttnSwap = id => {
+                let current = Snap(id) 
+                let swap = id == "#PlayBttn" ? Snap("#PauseBttn") : Snap("#PlayBttn")
+                current.attr({
+                    display: hidden
+                })
+                swap.attr({
+                    display: visible
+                })
+            }*/
+            function animateNeedle(){
+                var p = Snap("#Needle")
+                p.animate({x2: 418.5}, 500, function(){
+                    p.animate({x2:218.5}, 1000, function(){
+                        p.animate({x2:318.5}, 500)
+                    })
+                })
+            };
+        </script>        
     </body>
 </html>
