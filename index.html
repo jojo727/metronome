@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="CSS/styles.css">
         <script src="dist/snap.svg-min.js"></script>
+        <script src="main.js"></script>
         
     </head>
 
@@ -24,7 +25,6 @@
             .st6{fill:none;stroke:#1D1D1B;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
             .st7{fill:#333333;stroke:#333333;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
             .st8{fill:#F7931E;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;}
-            .st9{display:none;}
             .st10{display:inline;fill:#333333;stroke:#1D1D1B;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
             .st11{display:inline;fill:#333333;stroke:#333333;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
             .st12{display:inline;fill:#FF0000;stroke:#FF0000;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
@@ -32,9 +32,8 @@
             .st14{fill:#006837;stroke:#1D1D1B;stroke-linecap:round;stroke-miterlimit:10;}
             .st15{fill:#F7931E;}
             .st16{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
-            #PlayBttn{display:inline-block}
         </style>
-        <g id="Metronome">
+        <g id="Metronome" onclick="metrocolor()">
             <path class="st0" d="M121,332.5c-13.5,0-24.5-11-24.5-24.5V72c0-13.5,11-24.5,24.5-24.5h386c13.5,0,24.5,11,24.5,24.5v236
                 c0,13.5-11,24.5-24.5,24.5H121z"/>
             <path d="M507,48c13.2,0,24,10.8,24,24v236c0,13.2-10.8,24-24,24H121c-13.2,0-24-10.8-24-24V72c0-13.2,10.8-24,24-24H507 M507,47
@@ -62,13 +61,13 @@
                     <ellipse class="st0" cx="495.6" cy="308.5" rx="13.5" ry="12.1"/>
                 </g>
                 <g>
-                    <ellipse class="st6" cx="495.6" cy="308.5" rx="13.5" ry="12.1"/>
+                    <ellipse class="st6" cx="495.6" cy="308.5" rx="13.5" ry="12.1" onclick="activate()"/>
                 </g>
             </g>
             <rect id="PowerLine" x="492.8" y="286.2" class="st7" width="5.5" height="22.4"/>
             <g id="PowerWhiteSpace">
                 <path class="st0" d="M494.3,307.6c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1v-15.9c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1V307.6z"/>
-                <path class="st6" d="M494.3,307.6c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1v-15.9c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1V307.6z"/>
+                <path class="st6" d="M494.3,307.6c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1v-15.9c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1V307.6z" onclick="activate()"/>
             </g>
         </g>
         <g id="BeatTempo_Screen">
@@ -76,16 +75,16 @@
                 <rect id="BTScreen" x="232.5" y="200.5" class="st8" width="165" height="74"/>
             </g>
         </g>
-        <g id="Play-Pause">
+        <g id="Play-Pause" onclick="playToggle()">
             <g id="delete-this">
             </g>
-            <g id="PauseBttn" class="st9" onclick="bttnswap('#PauseBttn')">
+            <g id="PauseBttn" class="st9" >
                 <ellipse id="PauseCircle" class="st10" cx="308" cy="308" rx="17.3" ry="17.5"/>
                 <rect id="PauseSpace" x="306.5" y="300.5" class="st11" width="3" height="15"/>
                 <rect id="PauseLine2" x="300.1" y="300.5" class="st12" width="5.9" height="15"/>
                 <rect id="PauseLine1" x="309" y="300.5" class="st12" width="5.9" height="15"/>
             </g>
-            <g id="PlayBttn" onclick="animateNeedle();bttnSwap('#PlayBttn')">
+            <g id="PlayBttn" onclick="animateNeedle()">
                 <circle id="PlayCircle" class="st13" cx="308" cy="308" r="17.5"/>
                 <polygon id="PlayIcon" class="st14" points="302,315.1 317,307.6 302,300.1 		"/>
             </g>
@@ -98,7 +97,7 @@
             <line id="Needle" class="st16" x1="318.5" y1="175" x2="318.5" y2="75"/>
         </g>
         </svg>
-        <script>
+        <!--script>
             /*let bttnSwap = id => {
                 let current = Snap(id) 
                 let swap = id == "#PlayBttn" ? Snap("#PauseBttn") : Snap("#PlayBttn")
@@ -117,6 +116,6 @@
                     })
                 })
             };
-        </script>        
+        </script-->        
     </body>
 </html>
