@@ -1,7 +1,7 @@
 var powerOn = false;
 var tempo = 0;
 var beat = 0;
-var playing = true;
+var playing = false;
 
 function metrocolor(){
     var m = Snap("#Metronome .st0")
@@ -15,6 +15,8 @@ function activate(){
         console.log("yay")
         powerOn = true;
         power.stroke = "#FF0000"
+        setScreenColor()
+
     }
     else{
         powerOn = false;
@@ -23,8 +25,14 @@ function activate(){
     }
 }
 
+function setScreenColor(){
+    let screens = [Snap(".st15"),Snap("#BeatTempoGroup .st8")]
+        screens.forEach(screen => { 
+            screen.attr({fill: powerOn ? "green" : "orange"})
+        });
+}
 function animateNeedle(){
-    if (powerOn)
+    if (powerOn && playing)
         {
         let p = Snap("#Needle")
         p.animate({x2: 418.5}, 500, function(){
@@ -32,19 +40,22 @@ function animateNeedle(){
                 p.animate({x2:318.5}, 500)
             })
         })
-    };  
+    }
 }
 
 function playToggle(){
-    let p = [Snap('#PlayBttn'),Snap('#PauseBttn')]
-    if (playing){
-        p[0].attr({display:'none'})
-        p[1].attr({display:'inline-block'})
-        playing=false
-    }
-    else{
-        p[1].attr({display:'none'})
-        p[0].attr({display:'inline-block'})
-        playing=true
+    if (powerOn){
+        let p = [Snap('#PlayBttn'),Snap('#PauseBttn')]
+        if (playing){
+            p[1].attr({display:'none'})
+            p[0].attr({display:'inline-block'})
+            playing=false
+        }
+        else{
+            p[0].attr({display:'none'})
+            p[1].attr({display:'inline-block'})
+            playing=true
+            animateNeedle()
+        }
     }
 }
