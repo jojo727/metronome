@@ -25,9 +25,12 @@ function activate(){
 
     }
     else{
-        powerOn = false;
-        console.log("why am i like this")
+        console.log("whoff")
         power.attr({stroke:'#1D1D1B'})
+        if (playing){
+            playToggle()
+        }
+        powerOn = false;
     }
 }
 
