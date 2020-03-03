@@ -15,18 +15,22 @@ var beatPerSecond = (bpm) => {
 
 //want to map st6 path color...
 function activate(){
-    console.log('hi')
-    var power = Snap(".st6")
-    if (!powerOn){
-        console.log("yay")
+    var power = [Snap("#PowerBttn"),Snap("#PowerBttnOn")]
+    var tempoCount = Snap("#TempoCount")
+    if (!powerOn){    
+        console.log('hi')
         powerOn = true;
-        power.stroke = "#FF0000"
-        setScreenColor()
+        power[0].attr({display:'none'})
+        power[1].attr({display:'inline-block'})
+        tempoCount.attr({display:'inline-block'})
+        //Snap("#PowerBttn .st0").attr({display:'none'})
 
     }
     else{
-        console.log("whoff")
-        power.attr({stroke:'#1D1D1B'})
+        console.log("off")
+        console.log("000"+1)
+        power[0].attr({display:'inline-block'})
+        power[1].attr({display:'none'})
         if (playing){
             playToggle()
         }

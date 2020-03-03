@@ -80,7 +80,7 @@
 <g id="BeatTempo_Screen">
 	<rect id="BTScreen" x="232.5" y="200.5" class="st12" width="165" height="74"/>
 	<rect x="313.7" y="214.1" class="st2" width="75.3" height="38.9"/>
-	<text id="TempoCount" transform="matrix(1 0 0 1 315.1934 247.4561)" class="st8 st4 st13">000</text>
+	<text id="TempoCount" transform="matrix(1 0 0 1 310.1934 247.4561)" class="st8 st4 st13">000</text>
 </g>
 <g id="Play-Pause">
 	<g id="delete-this">

@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="CSS/styles.css">
         <script src="dist/snap.svg-min.js"></script>
         <script src="main.js"></script>
-        <script src="animation.js"></script>
         
     </head>
     
@@ -26,14 +25,19 @@
             .st5{font-size:12px;}
             .st6{fill:none;stroke:#1D1D1B;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
             .st7{fill:#333333;stroke:#333333;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
-            .st8{fill:#F7931E;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;}
-            .st10{display:inline;fill:#333333;stroke:#1D1D1B;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
-            .st11{display:inline;fill:#333333;stroke:#333333;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
-            .st12{display:inline;fill:#FF0000;stroke:#FF0000;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
-            .st13{fill:#333333;stroke:#1D1D1B;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
-            .st14{fill:#006837;stroke:#1D1D1B;stroke-linecap:round;stroke-miterlimit:10;}
-            .st15{fill:#F7931E;}
-            .st16{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+            .st8{display:none;}
+            .st9{display:inline;}
+            .st10{fill:none;stroke:#FF0000;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
+            .st11{display:inline;fill:#333333;stroke:#333333;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
+            .st12{fill:#F7931E;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;}
+            .st13{font-size:47px;}
+            .st14{display:inline;fill:#333333;stroke:#1D1D1B;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+            .st15{display:inline;fill:#333333;stroke:#333333;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
+            .st16{display:inline;fill:#FF0000;stroke:#FF0000;stroke-width:0.75;stroke-linecap:round;stroke-miterlimit:10;}
+            .st17{fill:#333333;stroke:#1D1D1B;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+            .st18{fill:#006837;stroke:#1D1D1B;stroke-linecap:round;stroke-miterlimit:10;}
+            .st19{fill:#F7931E;}
+            .st20{fill:none;stroke:#333333;stroke-width:4;stroke-miterlimit:10;}
         </style>
         <g id="Metronome" onclick="metrocolor()">
             <path class="st0" d="M121,332.5c-13.5,0-24.5-11-24.5-24.5V72c0-13.5,11-24.5,24.5-24.5h386c13.5,0,24.5,11,24.5,24.5v236
@@ -57,46 +61,61 @@
             <rect x="452" y="216.7" class="st2" width="19" height="21.2"/>
             <text transform="matrix(1 0 0 1 458.5288 225.2593)" class="st3 st4 st5">T</text>
         </g>
-        <g id="PowerBttn">
+        <g id="PowerBttn" onclick="activate()">
             <g id="PowerCircle">
                 <g>
                     <ellipse class="st0" cx="495.6" cy="308.5" rx="13.5" ry="12.1"/>
                 </g>
                 <g>
-                    <ellipse class="st6" cx="495.6" cy="308.5" rx="13.5" ry="12.1" onclick="activate()"/>
+                    <ellipse class="st6" cx="495.6" cy="308.5" rx="13.5" ry="12.1"/>
                 </g>
             </g>
-            <rect id="PowerLine" x="492.8" y="286.2" class="st7" width="5.5" height="22.4"/>
-            <g id="PowerWhiteSpace">
+            <rect id="PowerWhiteSpace" x="492.8" y="286.2" class="st7" width="5.5" height="22.4"/>
+            <g id="PowerLine_1_">
                 <path class="st0" d="M494.3,307.6c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1v-15.9c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1V307.6z"/>
-                <path class="st6" d="M494.3,307.6c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1v-15.9c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1V307.6z" onclick="activate()"/>
+                <path class="st6" d="M494.3,307.6c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1v-15.9c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1V307.6z"/>
+            </g>
+        </g>
+        <g id="PowerBttnOn" class="st8" onclick="activate()">
+            <g id="PowerCircle_1_" class="st9">
+                <g>
+                    <ellipse class="st0" cx="495.6" cy="308.5" rx="13.5" ry="12.1"/>
+                </g>
+                <g>
+                    <ellipse class="st10" cx="495.6" cy="308.5" rx="13.5" ry="12.1"/>
+                </g>
+            </g>
+            <rect id="PowerWhiteSpace_1_" x="492.8" y="286.2" class="st11" width="5.5" height="22.4"/>
+            <g id="PowerLine_2_" class="st9">
+                <path class="st0" d="M494.3,307.6c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1v-15.9c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1V307.6z"/>
+                <path class="st10" d="M494.3,307.6c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1v-15.9c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1V307.6z"/>
             </g>
         </g>
         <g id="BeatTempo_Screen">
-            <g id="BeatTempoGroup">
-                <rect id="BTScreen" x="232.5" y="200.5" class="st8" width="165" height="74"/>
-            </g>
+            <rect id="BTScreen" x="232.5" y="200.5" class="st12" width="165" height="74"/>
+            <rect x="313.7" y="214.1" class="st2" width="75.3" height="38.9"/>
+            <text id="TempoCount" transform="matrix(1 0 0 1 310.1934 247.4561)" class="st8 st4 st13">000</text>
         </g>
         <g id="Play-Pause" onclick="playToggle()">
-            <g id="delete-this">
-            </g>
-            <g id="PauseBttn" class="st9">
-                <ellipse id="PauseCircle" class="st10" cx="308" cy="308" rx="17.3" ry="17.5"/>
-                <rect id="PauseSpace" x="306.5" y="300.5" class="st11" width="3" height="15"/>
-                <rect id="PauseLine2" x="300.1" y="300.5" class="st12" width="5.9" height="15"/>
-                <rect id="PauseLine1" x="309" y="300.5" class="st12" width="5.9" height="15"/>
+            <g id="PauseBttn" class="st8">
+                <ellipse id="PauseCircle" class="st14" cx="308" cy="308" rx="17.3" ry="17.5"/>
+                <rect id="PauseSpace" x="306.5" y="300.5" class="st15" width="3" height="15"/>
+                <rect id="PauseLine2" x="300.1" y="300.5" class="st16" width="5.9" height="15"/>
+                <rect id="PauseLine1" x="309" y="300.5" class="st16" width="5.9" height="15"/>
             </g>
             <g id="PlayBttn">
-                <circle id="PlayCircle" class="st13" cx="308" cy="308" r="17.5"/>
-                <polygon id="PlayIcon" class="st14" points="302,315.1 317,307.6 302,300.1 		"/>
+                <g>
+                    <circle id="PlayCircle" class="st17" cx="308" cy="308" r="17.5"/>
+                    <polygon id="PlayIcon" class="st18" points="302,315.1 317,307.6 302,300.1"/>
+                </g>
             </g>
         </g>
         <g id="MainScreenLayer">
             <g id="MainScreen">
-                <rect x="218.8" y="71.3" class="st15" width="199.5" height="103.5"/>
+                <rect x="218.8" y="71.3" class="st19" width="199.5" height="103.5"/>
                 <path d="M418,71.5v103H219v-103H418 M418.5,71h-200v104h200V71L418.5,71z"/>
             </g>
-            <line id="Needle" class="st16" x1="318.5" y1="175" x2="418.5" y2="75"/>
+            <line id="Needle" class="st20" x1="318.5" y1="188" x2="318.5" y2="88"/>
         </g>
         </svg>    
     </body>
