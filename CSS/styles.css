@@ -1,0 +1,8 @@
+/*st0 - metronome itself*/
+
+#PowerBttn:hover .st6{
+    stroke: red;
+}
+#PowerBttn:focus .st6{
+    stroke: red;
+}
