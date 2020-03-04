@@ -39,7 +39,7 @@
             .st19{fill:#F7931E;}
             .st20{fill:none;stroke:#333333;stroke-width:4;stroke-miterlimit:10;}
         </style>
-        <g id="Metronome" onclick="metrocolor()">
+        <g id="Metronome">
             <path class="st0" d="M121,332.5c-13.5,0-24.5-11-24.5-24.5V72c0-13.5,11-24.5,24.5-24.5h386c13.5,0,24.5,11,24.5,24.5v236
                 c0,13.5-11,24.5-24.5,24.5H121z"/>
             <path d="M507,48c13.2,0,24,10.8,24,24v236c0,13.2-10.8,24-24,24H121c-13.2,0-24-10.8-24-24V72c0-13.2,10.8-24,24-24H507 M507,47
@@ -54,8 +54,8 @@
             <text transform="matrix(1 0 0 1 173.0415 225.5854)" class="st3 st4 st5">B</text>
         </g>
         <g id="TempoCtrls">
-            <polygon id="incTempo" class="st1" points="461.1,186.6 449.5,209.5 472.8,209.5 	"/>
-            <polygon id="decTempo" class="st1" points="461.1,255.4 472.8,232.5 449.5,232.5 	"/>
+            <polygon id="incTempo" class="st1" points="461.1,186.6 449.5,209.5 472.8,209.5 	" onclick="updateTempo('inc')"/>
+            <polygon id="decTempo" class="st1" points="461.1,255.4 472.8,232.5 449.5,232.5 	" onclick="updateTempo('dec')"/>
             <polygon id="TempSoundRight" class="st1" points="495.5,221.8 472.5,210.3 472.5,233.3 	"/>
             <polygon id="TempSoundLeft" class="st1" points="426.7,221.9 449.5,233.3 449.5,210.5 	"/>
             <rect x="452" y="216.7" class="st2" width="19" height="21.2"/>
@@ -94,7 +94,7 @@
         <g id="BeatTempo_Screen">
             <rect id="BTScreen" x="232.5" y="200.5" class="st12" width="165" height="74"/>
             <rect x="313.7" y="214.1" class="st2" width="75.3" height="38.9"/>
-            <text id="TempoCount" transform="matrix(1 0 0 1 310.1934 247.4561)" class="st8 st4 st13">000</text>
+            <text id="TempoCount" transform="matrix(1 0 0 1 310.1934 247.4561)" class="st8 st4 st13">030</text>
         </g>
         <g id="Play-Pause" onclick="playToggle()">
             <g id="PauseBttn" class="st8">
