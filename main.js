@@ -93,6 +93,6 @@ function playToggle(){
 }
 
 function displayTempo(bpm){
-    tempoCount.innerSVG = (bpm < 100) ? ("0" + bpm + "") : ("" + bpm + "")
-    return tempoCount.innerSVG
+    let tempoVal = (bpm < 100) ? ("0" + bpm + "") : ("" + bpm + "")
+    tempoCount.attr({text:tempoVal})
 }
